@@ -31,3 +31,4 @@ var user_name = '고길동';
 
 console.log(`안녕하세요! 제 이름은 ${user_name}입니다`);
 console.log(`${user_name}은 아주 착합니다.`);
+

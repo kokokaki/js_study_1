@@ -10,5 +10,21 @@
     
     <input type="email" id="account" value="abc@gmail.com">
 
+    <script>
+        const $inp = document.querySelector('input');
+
+        console.log($inp.attributes);
+        console.log($inp.attributes[1]);
+        console.log($inp.attributes.type);
+        console.log($inp.attributes.value);
+        console.log($inp.attributes.value.value);
+        console.log($inp.attributes.id.value);
+
+        $inp.attributes.value.value = 'ddddd@naver.com';
+
+        $inp.attributes.type.value = 'checkbox';
+
+    </script>
+
 </body>
 </html>

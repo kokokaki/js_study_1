@@ -14,8 +14,9 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <button id="hider">텍스트 숨기기!</button>
 
     <div class="text">안녕하세요!</div>
@@ -23,29 +24,22 @@
         //버튼을 클릭하면 div태그가 숨겨지도록 
         //이벤트 핸들러를 구현하세요.
         //힌트) css의 display: none; 사용
-        
-        
 
-
-
-        
         const $btn = document.getElementById('hider');
-        const $text = document.querySelector('.text');
 
         $btn.onclick = () => {
-            //텍스트가 나와있으면
+            const $text = document.querySelector('.text');
+
             if (!$text.classList.contains('hide')) {
                 $text.classList.add('hide');
                 $btn.textContent = '텍스트 보이기!';
             } else {
-                //텍스트가 숨어있으면
                 $text.classList.remove('hide');
                 $btn.textContent = '텍스트 숨기기!';
             }
         };
-        
-        
     </script>
 
 </body>
+
 </html>

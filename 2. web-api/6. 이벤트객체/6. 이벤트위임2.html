@@ -9,6 +9,7 @@
     <style>
         #fruits {
             display: flex;
+            flex-wrap: wrap;
             list-style: none;
             padding: 20px;
             border: 2px solid red;
@@ -59,6 +60,8 @@
                 return;
             }
 
+            
+
             //1. 클릭대상을 제외한 li태그에 있는 class="active" 제거
             for (let $li of [...$fruits.children]) {
                 if ($li.classList.contains('active')) {
@@ -83,6 +86,24 @@
 
         //ul에 이벤트부여 후 버블링 사용
         $fruits.onclick = activate;
+
+        //버튼 요소 노드
+        const $add = document.getElementById('add');
+
+        $add.onclick = e => {
+            const $textBox = document.querySelector('.text-box');
+            // console.log($textBox.value);
+
+            // <li id="orange">Orange</li>
+            const $newLi = document.createElement('li');
+            $newLi.textContent = $textBox.value;
+            //toLowerCase(): 문자열을 전부 소문자로 변환 <-> toUpperCase()
+            $newLi.setAttribute('id', $newLi.textContent.toLowerCase());
+
+            $fruits.appendChild($newLi);
+
+            $textBox.value = '';
+        };
 
         
 

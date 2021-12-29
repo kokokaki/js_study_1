@@ -164,17 +164,40 @@ function modifyTodoData($modSpan) {
     console.log(todos);
 }
 
+//할 일 추가 시 입력값 검증
+function isValidate() {
+
+    const $todoText = document.getElementById('todo-text');
+
+    //trim(): 문자열의 앞뒤 공백을 제거함
+    if ($todoText.value.trim() === '') { //아무것도 안썻으면
+        $todoText.style.background = 'orangered';
+        $todoText.setAttribute('placeholder', '필수 입력사항입니다!');
+        $todoText.value = '';
+        return false;
+    } else if ($todoText.value.length > 10) {
+        $todoText.style.background = 'orangered';
+        $todoText.setAttribute('placeholder', '글자 수는 10글자 이내로 쓰세요!');
+        $todoText.value = '';
+        return false;
+    } else {
+        $todoText.style.background = '';
+        $todoText.setAttribute('placeholder', '할 일을 입력하세요.');
+        return true;
+    }
+}
 
 //==================== 메인 실행부 ==============================//
 (function () {
-
 
     //할 일 추가 이벤트
     const $addBtn = document.getElementById('add');
     $addBtn.addEventListener('click', e => {
         e.preventDefault();
 
-        insertToDoData();
+        if (isValidate()) {
+            insertToDoData();
+        }
 
     });
 

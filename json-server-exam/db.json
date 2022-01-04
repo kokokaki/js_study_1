@@ -1,32 +1,47 @@
 {
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "account": "abc1234",
-      "password": "aaa1234!",
-      "userName": "고길동",
-      "address": "대전시 유성구"
+      "userName": "홍길동",
+      "password": "ddddss",
+      "address": "대전시 서구",
+      
     },
     {
-      "id": 2,
-      "account": "def4321",
-      "password": "ddd4321!",
-      "userName": "박영희",
-      "address": "서울시 중구"
+      "id": "2",
+      "account": "ddd1234",
+      "userName": "영희팍",
+      "password": "dsdsf",
+      "address": "로스앤젤레스"
     },
     {
-      "id": 3,
-      "account": "ggg4321",
-      "password": "ggg4321!",
-      "userName": "마이콜",
-      "address": "대전시 서구"
-    },
-    {
-      "id": "7",
-      "account": "lalala",
-      "userName": "라라라",
-      "password": "1234",
-      "address": "서울시 마포구"
+      "id": "3",
+      "account": "ggg4444",
+      "userName": "김영희",
+      "password": "dsdfafd",
+      "address": "부산시 수영구"
     }
+  ],
+  "board": [
+      {
+        "id": 1,
+        "title": "신난다",
+        "writer": "홍길동",
+        "userId": 1
+      },
+      {
+        "id": 2,
+        "title": "재밌다",
+        "writer": "영희팍",
+        "userId": 2
+      },
+      {
+        "id": 3,
+        "title": "랄라라",
+        "writer": "홍길동",
+        "userId": 1
+      }
+      
   ]
 }
